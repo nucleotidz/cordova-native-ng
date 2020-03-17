@@ -1,0 +1,5 @@
+keytool -genkey -v -keystore my-release-key.keystore -alias COVID19 -keyalg RSA -keysize 2048 -validity 10000
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app-release-unsigned.apk COVID19
+
+C:\Users\cs168e\AppData\Local\Android\Sdk\build-tools\29.0.3\zipalign -v 4 app-release-unsigned.apk Covid19.apk
