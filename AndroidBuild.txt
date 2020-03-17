@@ -1,3 +1,6 @@
+in cmd got to project folder(C:\PER-WP\EDU\COVID) and run ionic cordova build --release android
+
+then go to Project C:\PER-WP\EDU\COVID) \platforms\android\app\build\outputs\apk\release
 keytool -genkey -v -keystore my-release-key.keystore -alias COVID19 -keyalg RSA -keysize 2048 -validity 10000
 
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app-release-unsigned.apk COVID19
